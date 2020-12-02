@@ -15,9 +15,7 @@ void main(void)
 	heartbeat_setup();
 	pwm_led_setup();
 	printk("Nucleo Project\n");
-
-	LOG_MODULE_DECLARE(main, LOG_LEVEL_DBG);
-	LOG_DBG("This is a debug message from Logger API\r\n");
+	
 	LOG_ERR("This is a error message from Logger API\r\n");
 	LOG_INF("This is a info  message from Logger API\r\n");
 

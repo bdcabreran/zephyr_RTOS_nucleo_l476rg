@@ -10,3 +10,11 @@ tests:
     harness: led
     integration_platforms:
       - frdm_k64f
+sample:
+  description: TBD
+  name: TBD
+tests:
+  sample.bluetooth.st_ble_sensor:
+    harness: bluetooth
+    platform_allow: nucleo_wb55rg
+    tags: bluetooth

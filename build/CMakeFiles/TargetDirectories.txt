@@ -79,8 +79,11 @@
 /home/bayron/zephyr_RTOS_nucleo_l476rg/build/zephyr/subsys/debug/CMakeFiles/edit_cache.dir
 /home/bayron/zephyr_RTOS_nucleo_l476rg/build/zephyr/subsys/logging/CMakeFiles/rebuild_cache.dir
 /home/bayron/zephyr_RTOS_nucleo_l476rg/build/zephyr/subsys/logging/CMakeFiles/edit_cache.dir
+/home/bayron/zephyr_RTOS_nucleo_l476rg/build/zephyr/subsys/disk/CMakeFiles/rebuild_cache.dir
+/home/bayron/zephyr_RTOS_nucleo_l476rg/build/zephyr/subsys/disk/CMakeFiles/edit_cache.dir
 /home/bayron/zephyr_RTOS_nucleo_l476rg/build/zephyr/subsys/fs/CMakeFiles/rebuild_cache.dir
 /home/bayron/zephyr_RTOS_nucleo_l476rg/build/zephyr/subsys/fs/CMakeFiles/edit_cache.dir
+/home/bayron/zephyr_RTOS_nucleo_l476rg/build/zephyr/subsys/fs/CMakeFiles/subsys__fs.dir
 /home/bayron/zephyr_RTOS_nucleo_l476rg/build/zephyr/subsys/mgmt/CMakeFiles/rebuild_cache.dir
 /home/bayron/zephyr_RTOS_nucleo_l476rg/build/zephyr/subsys/mgmt/CMakeFiles/edit_cache.dir
 /home/bayron/zephyr_RTOS_nucleo_l476rg/build/zephyr/subsys/random/CMakeFiles/rebuild_cache.dir
@@ -150,6 +153,7 @@
 /home/bayron/zephyr_RTOS_nucleo_l476rg/build/modules/esp-idf/CMakeFiles/edit_cache.dir
 /home/bayron/zephyr_RTOS_nucleo_l476rg/build/modules/fatfs/CMakeFiles/rebuild_cache.dir
 /home/bayron/zephyr_RTOS_nucleo_l476rg/build/modules/fatfs/CMakeFiles/edit_cache.dir
+/home/bayron/zephyr_RTOS_nucleo_l476rg/build/modules/fatfs/CMakeFiles/..__modules__fs__fatfs.dir
 /home/bayron/zephyr_RTOS_nucleo_l476rg/build/modules/cypress/CMakeFiles/rebuild_cache.dir
 /home/bayron/zephyr_RTOS_nucleo_l476rg/build/modules/cypress/CMakeFiles/edit_cache.dir
 /home/bayron/zephyr_RTOS_nucleo_l476rg/build/modules/infineon/CMakeFiles/rebuild_cache.dir

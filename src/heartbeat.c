@@ -1,9 +1,14 @@
 #include "heartbeat.h"
+#include <logging/log.h>
+
+LOG_MODULE_REGISTER(heartbeat);
 
 const struct device *dev;
 
 int heartbeat_setup(void)
 {
+	LOG_INF("Initializing Hearbeat...\r\n");
+
 	int ret;
 	dev = device_get_binding(LED0);
 	if (dev == NULL) {

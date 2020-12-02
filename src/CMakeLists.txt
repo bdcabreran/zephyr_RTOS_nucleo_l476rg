@@ -4,6 +4,7 @@ set(SOURCE_1
    main.c
    heartbeat.c
    pwm_led.c
+   fat_fs.c
 )
 
 set(SOURCES

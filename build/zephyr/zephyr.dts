@@ -71,7 +71,7 @@
 				reg = < 0x48000000 0x400 >;
 				clocks = < &rcc 0x1 0x1 >;
 				label = "GPIOA";
-				phandle = < 0x1c >;
+				phandle = < 0xf >;
 			};
 			gpiob: gpio@48000400 {
 				compatible = "st,stm32-gpio";
@@ -163,7 +163,7 @@
 			};
 			adc1_in1_pc0: adc1_in1_pc0 {
 				pinmux = < 0x2010 >;
-				phandle = < 0x10 >;
+				phandle = < 0x11 >;
 			};
 			adc1_in2_pc1: adc1_in2_pc1 {
 				pinmux = < 0x2110 >;
@@ -366,7 +366,7 @@
 			spi2_miso_pb14: spi2_miso_pb14 {
 				pinmux = < 0x1e05 >;
 				bias-pull-down;
-				phandle = < 0x15 >;
+				phandle = < 0x16 >;
 			};
 			spi2_miso_pc2: spi2_miso_pc2 {
 				pinmux = < 0x2205 >;
@@ -379,7 +379,7 @@
 			spi3_miso_pc11: spi3_miso_pc11 {
 				pinmux = < 0x2b06 >;
 				bias-pull-down;
-				phandle = < 0x19 >;
+				phandle = < 0x1a >;
 			};
 			spi1_mosi_pa7: spi1_mosi_pa7 {
 				pinmux = < 0x705 >;
@@ -393,7 +393,7 @@
 			spi2_mosi_pb15: spi2_mosi_pb15 {
 				pinmux = < 0x1f05 >;
 				bias-pull-down;
-				phandle = < 0x16 >;
+				phandle = < 0x17 >;
 			};
 			spi2_mosi_pc3: spi2_mosi_pc3 {
 				pinmux = < 0x2305 >;
@@ -406,7 +406,7 @@
 			spi3_mosi_pc12: spi3_mosi_pc12 {
 				pinmux = < 0x2c06 >;
 				bias-pull-down;
-				phandle = < 0x1a >;
+				phandle = < 0x1b >;
 			};
 			spi1_nss_pa4: spi1_nss_pa4 {
 				pinmux = < 0x405 >;
@@ -424,7 +424,7 @@
 			spi2_nss_pb12: spi2_nss_pb12 {
 				pinmux = < 0x1c05 >;
 				bias-pull-up;
-				phandle = < 0x13 >;
+				phandle = < 0x14 >;
 			};
 			spi3_nss_pa4: spi3_nss_pa4 {
 				pinmux = < 0x406 >;
@@ -433,7 +433,7 @@
 			spi3_nss_pa15: spi3_nss_pa15 {
 				pinmux = < 0xf06 >;
 				bias-pull-up;
-				phandle = < 0x17 >;
+				phandle = < 0x18 >;
 			};
 			spi1_sck_pa5: spi1_sck_pa5 {
 				pinmux = < 0x505 >;
@@ -451,7 +451,7 @@
 			spi2_sck_pb13: spi2_sck_pb13 {
 				pinmux = < 0x1d05 >;
 				slew-rate = "very-high-speed";
-				phandle = < 0x14 >;
+				phandle = < 0x15 >;
 			};
 			spi3_sck_pb3: spi3_sck_pb3 {
 				pinmux = < 0x1306 >;
@@ -460,7 +460,7 @@
 			spi3_sck_pc10: spi3_sck_pc10 {
 				pinmux = < 0x2a06 >;
 				slew-rate = "very-high-speed";
-				phandle = < 0x18 >;
+				phandle = < 0x19 >;
 			};
 			tim1_ch1n_pa7: tim1_ch1n_pa7 {
 				pinmux = < 0x701 >;
@@ -494,7 +494,7 @@
 			};
 			tim2_ch1_pa0: tim2_ch1_pa0 {
 				pinmux = < 0x1 >;
-				phandle = < 0xf >;
+				phandle = < 0x10 >;
 			};
 			tim2_ch2_pa1: tim2_ch2_pa1 {
 				pinmux = < 0x101 >;
@@ -744,7 +744,7 @@
 			};
 			usart3_rx_pb11: usart3_rx_pb11 {
 				pinmux = < 0x1b07 >;
-				phandle = < 0x12 >;
+				phandle = < 0x13 >;
 			};
 			usart3_rx_pc5: usart3_rx_pc5 {
 				pinmux = < 0x2507 >;
@@ -786,7 +786,7 @@
 			usart3_tx_pb10: usart3_tx_pb10 {
 				pinmux = < 0x1a07 >;
 				bias-pull-up;
-				phandle = < 0x11 >;
+				phandle = < 0x12 >;
 			};
 			usart3_tx_pc4: usart3_tx_pc4 {
 				pinmux = < 0x2407 >;
@@ -902,6 +902,14 @@
 			status = "okay";
 			label = "SPI_1";
 			pinctrl-0 = < &spi1_nss_pa4 &spi1_sck_pb3 &spi1_miso_pa6 &spi1_mosi_pa7 >;
+			cs-gpios = < &gpioa 0x4 0x0 >;
+			sdhc0: sdhc@0 {
+				compatible = "zephyr,mmc-spi-slot";
+				reg = < 0x0 >;
+				status = "okay";
+				label = "SDHC0";
+				spi-max-frequency = < 0x16e3600 >;
+			};
 		};
 		timers1: timers@40012c00 {
 			compatible = "st,stm32-timers";
@@ -1255,7 +1263,7 @@
 		compatible = "usb-nop-xceiv";
 		#phy-cells = < 0x0 >;
 		label = "OTGFS_PHY";
-		phandle = < 0x1b >;
+		phandle = < 0x1c >;
 	};
 	arduino_header: connector {
 		compatible = "arduino-header-r3";

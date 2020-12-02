@@ -1405,7 +1405,7 @@ arduino_i2c: &i2c1 {};
 };
 &spi1 {
  status = "okay";
- cs-gpios = <&gpioa 4 (0 << 0)>;
+ cs-gpios = <&gpioa 4 (1 << 0)>;
  sdhc0: sdhc@0
  {
   compatible = "zephyr,mmc-spi-slot";

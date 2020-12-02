@@ -12,13 +12,12 @@ LOG_MODULE_REGISTER(main);
 
 void main(void)
 {
-	heartbeat_setup();
-	pwm_led_setup();
 	printk("Nucleo Project\n");
 	
-	LOG_ERR("This is a error message from Logger API\r\n");
-	LOG_INF("This is a info  message from Logger API\r\n");
-
+	heartbeat_setup();
+	pwm_led_setup();
+	sd_card_init();
+	
 	while (1)
 	{
 		heartbeat_exec();

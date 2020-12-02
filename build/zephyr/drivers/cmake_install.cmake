@@ -41,6 +41,8 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/bayron/zephyr_RTOS_nucleo_l476rg/build/zephyr/drivers/gpio/cmake_install.cmake")
   include("/home/bayron/zephyr_RTOS_nucleo_l476rg/build/zephyr/drivers/pinmux/cmake_install.cmake")
   include("/home/bayron/zephyr_RTOS_nucleo_l476rg/build/zephyr/drivers/pwm/cmake_install.cmake")
+  include("/home/bayron/zephyr_RTOS_nucleo_l476rg/build/zephyr/drivers/spi/cmake_install.cmake")
+  include("/home/bayron/zephyr_RTOS_nucleo_l476rg/build/zephyr/drivers/flash/cmake_install.cmake")
   include("/home/bayron/zephyr_RTOS_nucleo_l476rg/build/zephyr/drivers/serial/cmake_install.cmake")
   include("/home/bayron/zephyr_RTOS_nucleo_l476rg/build/zephyr/drivers/timer/cmake_install.cmake")
 

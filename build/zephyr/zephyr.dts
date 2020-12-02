@@ -902,7 +902,7 @@
 			status = "okay";
 			label = "SPI_1";
 			pinctrl-0 = < &spi1_nss_pa4 &spi1_sck_pb3 &spi1_miso_pa6 &spi1_mosi_pa7 >;
-			cs-gpios = < &gpioa 0x4 0x0 >;
+			cs-gpios = < &gpioa 0x4 0x1 >;
 			sdhc0: sdhc@0 {
 				compatible = "zephyr,mmc-spi-slot";
 				reg = < 0x0 >;

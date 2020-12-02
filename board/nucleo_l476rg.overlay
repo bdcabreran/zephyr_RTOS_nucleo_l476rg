@@ -1,0 +1,56 @@
+/*
+ * Copyright (c) 2019 STMicroelectronics
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+ 
+ / {
+	model = "STMicroelectronics STM32L476RG-NUCLEO board";
+	compatible = "st,stm32l476rg-nucleo";
+
+	chosen {
+		zephyr,console = &usart2;
+		zephyr,shell-uart = &usart2;
+		zephyr,sram = &sram0;
+		zephyr,flash = &flash0;
+	};
+
+	leds {
+		compatible = "gpio-leds";
+		green_led_2: led_2 {
+			gpios = <&gpioa 5 GPIO_ACTIVE_HIGH>;
+			label = "User LD2";
+		};
+	};
+
+	gpio_keys {
+		compatible = "gpio-keys";
+		user_button: button {
+			label = "User";
+			gpios = <&gpioc 13 GPIO_ACTIVE_LOW>;
+		};
+	};
+
+	pwmleds {
+		compatible = "pwm-leds";
+		pwm_led0: pwm_led_0 
+		{
+			pwms = <&pwm2 1 1000 PWM_POLARITY_NORMAL>;
+		};
+	};
+
+	aliases {
+		led0 = &green_led_2;
+		sw0 = &user_button;
+		pwm-led0 = &pwm_led0;
+	};
+};
+
+&timers2 {
+	status = "okay";
+	
+	pwm2: pwm {
+		status = "okay";
+		pinctrl-0 = <&tim2_ch1_pa0>;
+	};
+};
